@@ -12,23 +12,26 @@ function countTrim(value:string): number //takes in string/returns number
 //function takes in bool (a true or false) and string (a word)
 function combineCount(space: boolean, word: string): number
 {
-    //if the user wants to include leading and trailing spaces, calls method countString
+    //if the boolean is true, the user wants to include leading and trailing spaces
     if(space == true)
     {
         return word.length;
     }
-    //if the user wants to exclude them, calls the method to remove the spaces
+    //if the boolean is false, the user wants to exclude them, calls the method to remove the spaces
     else if(space == false)
     {
-        return word.trim().length
+        return word.trim().length //trims the length of the string
 
     }
-    return word.length;
+    else{
+        return word.length;
+    }
+    
 }
     
 
-//display the 
-///console.log(countString(" test "));
-//console.log(countTrim(" test "));
+//display the length of the strings
+console.log(countString(" test "));
+console.log(countTrim(" test "));
 console.log(combineCount(true, " test "))
 console.log(combineCount(false, " test "))
